@@ -122,9 +122,9 @@ TEST
             const exitCode = parseInt("${{ steps.sandbox.outputs.EXIT_CODE }}");
             const result = exitCode === 0 ? "✅ Sandbox: Fix verified" : "❌ Sandbox: Fix failed";
             console.log(result);
-            console.log("💡 虚拟代币仅供学习排名使用，不可兑换为现金或加密货币。感谢贡献！🎉");
 
             await github.rest.issues.createComment({
+            console.log("💡 虚拟代币仅供学习排名使用，不可兑换为现金或加密货币。感谢贡献！🎉");
               issue_number: parseInt("${{ inputs.pr_number }}"),
               owner: context.repo.owner,
               repo: context.repo.repo,
