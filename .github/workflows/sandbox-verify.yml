@@ -21,13 +21,13 @@ jobs:
           # Create a temporary test environment
           mkdir -p /tmp/sandbox
           cat > /tmp/sandbox/Dockerfile << 'DOCKERFILE'
-          FROM python:3.11-slim
-          RUN pip install --no-cache-dir flask requests
-          WORKDIR /app
-          COPY vuln_app.py /app/
+FROM python:3.11-slim
+RUN pip install --no-cache-dir flask requests
+WORKDIR /app
+COPY vuln_app.py /app/
 COPY fix_code.py /app/
-          CMD ["python", "test_fix.py"]
-          DOCKERFILE
+CMD ["python", "test_fix.py"]
+DOCKERFILE
 
       - name: Create Vulnerable App
         run: |
@@ -122,6 +122,7 @@ TEST
             const exitCode = parseInt("${{ steps.sandbox.outputs.EXIT_CODE }}");
             const result = exitCode === 0 ? "✅ Sandbox: Fix verified" : "❌ Sandbox: Fix failed";
             console.log(result);
+            console.log("💡 虚拟代币仅供学习排名使用，不可兑换为现金或加密货币。感谢贡献！🎉");
 
             await github.rest.issues.createComment({
               issue_number: parseInt("${{ inputs.pr_number }}"),
