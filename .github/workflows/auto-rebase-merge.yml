@@ -11,8 +11,8 @@ on:
         type: string
 
 concurrency:
-  group: auto-rebase-merge
-  cancel-in-progress: true
+  group: auto-rebase-merge-${{ github.event.inputs.pr_number || github.event.pull_request.number }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
