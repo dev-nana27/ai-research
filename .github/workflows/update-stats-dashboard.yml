@@ -2,8 +2,6 @@ name: Update Stats Dashboard
 on:
   push:
     branches: [master]
-  schedule:
-    - cron: "0 4 * * *"
   workflow_dispatch:
 permissions:
   contents: write
@@ -13,6 +11,4 @@ jobs:
   stats:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Simple Test
-        run: echo hello
+      - run: echo hello
