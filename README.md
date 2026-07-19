@@ -1,10 +1,10 @@
 <!-- STATS_BADGES -->
 ![Tasks](https://img.shields.io/badge/tasks-0-blue)
 ![Contributors](https://img.shields.io/badge/contributors-13-brightgreen)
-![Bounty](https://img.shields.io/badge/bounty-$4395-gold)
-![Submissions](https://img.shields.io/badge/submissions-140-orange)
+![Bounty](https://img.shields.io/badge/bounty-$4470-gold)
+![Submissions](https://img.shields.io/badge/submissions-141-orange)
 ![Stars](https://img.shields.io/github/stars/zhangjiayang6835-cyber/ai-research)
-![Last Updated](https://img.shields.io/badge/updated-2026-07-16-lightgrey)
+![Last Updated](https://img.shields.io/badge/updated-2026-07-19-lightgrey)
 <!-- STATS_BADGES_END -->
 
 <div align="center">
